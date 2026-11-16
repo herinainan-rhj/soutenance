@@ -6,6 +6,7 @@ import "../styles/admin.css";
 
 const LINKS = [
     { to: "/admin/dashboard", label: "Tableau de bord", icon: "dashboard" },
+    { to: "/admin/users", label: "Utilisateurs", icon: "users" }, // <--- Élément ajouté ici !
     { to: "/admin/jobs", label: "Offres d'emploi", icon: "briefcase" },
     { to: "/admin/candidates", label: "Candidats", icon: "users" },
     { to: "/admin/tests", label: "Tests QCM", icon: "clipboard" },

@@ -64,7 +64,7 @@ export default function HomePage() {
                         <span className="hero-eyebrow">Nous recrutons</span>
 
                         <h1>
-                            Construisez la suite de votre carrière avec E RAY
+                            Construisez la suite de votre carrière avec ERAY
                         </h1>
 
                         <p>

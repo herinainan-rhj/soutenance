@@ -6,7 +6,7 @@ export default function JobCard({ job, onApply }) {
         <article className="job-card">
             <div className="job-card-top">
                 <span className="job-card-dept">
-                    {job.departement || "E RAY"}
+                    {job.departement || "E ERAY"}
                 </span>
 
                 {job.type_contrat && (

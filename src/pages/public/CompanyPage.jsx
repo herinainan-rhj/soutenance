@@ -64,7 +64,7 @@ export default function CompanyPage() {
                         <h2>Une équipe au service de projets numériques</h2>
 
                         <p>
-                            E RAY réunit des profils techniques et créatifs
+                            ERAY réunit des profils techniques et créatifs
                             autour de projets numériques : développement,
                             design et infrastructure.
                         </p>

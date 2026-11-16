@@ -7,8 +7,8 @@ export default function Logo({ to = "/", light = false }) {
             className={`logo ${light ? "logo-light" : ""}`}
             aria-label="E RAY — accueil"
         >
-            <span className="logo-circle">E</span>
-            <span className="logo-text">RAY</span>
+            <img src="/eray.png" alt="Logo Eray" className="logo-circle" />
+            <span className="logo-text">ERAY</span>
         </Link>
     );
 }

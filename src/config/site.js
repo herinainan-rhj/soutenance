@@ -4,7 +4,7 @@
  * un champ laissé vide n'est simplement pas affiché.
  */
 const site = {
-    nom: "E RAY",
+    nom: "E ERAY",
     slogan: "Recrutement",
     email: "",
     telephone: "",

@@ -12,26 +12,36 @@ import ContactPage from "./pages/public/ContactPage";
 import NotFoundPage from "./pages/public/NotFoundPage";
 import TestPage from "./pages/public/TestPage";
 
+// Pages Authentification
+import LoginPage from "./pages/admin/LoginPage";
+import RegisterPage from "./pages/admin/RegisterPage";
+import ResetPasswordPage from "./pages/admin/ResetPasswordPage";
+
+// Pages d'administration
 import Dashboard from "./pages/admin/Dashboard";
 import JobsManagement from "./pages/admin/JobsManagement";
 import CandidatesManagement from "./pages/admin/CandidatesManagement";
 import QuestionnaireManagement from "./pages/admin/QuestionnaireManagement";
 import EmailsPage from "./pages/admin/EmailsPage";
 import SettingsPage from "./pages/admin/SettingsPage";
-
+import AdminUsersPage from "./pages/admin/AdminUsersPage"; // <-- Nouvelle page ajoutée
 
 function App() {
-
     return (
-
         <BrowserRouter>
-
             <Routes>
+
+                {/* =========================================
+                   AUTHENTIFICATION & MOT DE PASSE
+                ========================================= */}
+                <Route path="/login" element={<LoginPage />} />
+                <Route path="/register" element={<RegisterPage />} />
+                <Route path="/reset-password" element={<ResetPasswordPage />} />
+                <Route path="/forgot-password" element={<ResetPasswordPage />} />
 
                 {/* =========================================
                    SITE PUBLIC
                 ========================================= */}
-
                 <Route element={<PublicLayout />}>
                     <Route path="/" element={<HomePage />} />
                     <Route path="/jobs" element={<JobsPage />} />
@@ -45,14 +55,13 @@ function App() {
                 {/* TEST DE RECRUTEMENT (sans navigation, pour rester concentré) */}
                 <Route path="/test" element={<TestPage />} />
 
-
                 {/* =========================================
-                   BACKOFFICE
+                   BACKOFFICE (Espace Administration)
                 ========================================= */}
-
                 <Route path="/admin" element={<AdminLayout />}>
                     <Route index element={<Navigate to="dashboard" replace />} />
                     <Route path="dashboard" element={<Dashboard />} />
+                    <Route path="users" element={<AdminUsersPage />} /> {/* <-- Route Gestion Utilisateurs */}
                     <Route path="jobs" element={<JobsManagement />} />
                     <Route path="candidates" element={<CandidatesManagement />} />
                     <Route path="tests" element={<QuestionnaireManagement />} />
@@ -62,7 +71,6 @@ function App() {
                 </Route>
 
             </Routes>
-
         </BrowserRouter>
     );
 }
